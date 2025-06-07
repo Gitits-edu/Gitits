@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reunión Padres y Coordinación ITS</title>
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow: hidden; /* Evita el scroll en la página principal */
+            font-family: Arial, Helvetica, sans-serif; /* Fuente profesional y legible */
+        }
+
+        body {
+            background-color: white;
+            color: black;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between; /* Para empujar el footer hacia abajo */
+            height: 100vh; /* Asegura que el body ocupe toda la altura de la ventana */
+        }
+
+        .presentation-container {
+            width: 80%; /* 100% - 10% margen izq - 10% margen der */
+            margin: 0 auto; /* Centra el contenedor con márgenes laterales del 10% */
+            flex-grow: 1; /* Permite que este contenedor crezca para ocupar el espacio disponible */
+            display: flex;
+            flex-direction: column;
+            overflow-y: auto; /* Permite scroll DENTRO de la diapositiva si el contenido es muy largo */
+        }
+
+        .slide {
+            display: none; /* Ocultar todas las diapositivas por defecto */
+            padding: 20px;
+            flex-grow: 1; /* Para que la diapositiva ocupe el espacio vertical disponible */
+            overflow-y: auto; /* Scroll interno si es necesario */
+        }
+
+        .slide.active {
+            display: block; /* Mostrar la diapositiva activa */
+        }
+
+        #cover-slide {
+            /* Se modificará con JavaScript para ocultarla permanentemente después del primer avance */
+            display: flex; 
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            height: 100%; 
+        }
+
+        #cover-slide img {
+            width: 200px;
+            height: auto; /* Mantiene la proporción */
+            margin-bottom: 50px; /* Espacio entre logo y título */
+        }
+
+        h1 {
+            font-size: 4.0em; 
+            margin-bottom: 20px;
+            text-align: center;
+            color: #333; 
+        }
+
+        h1 .icon {
+            margin-right: 15px;
+            font-size: 0.9em; 
+        }
+        
+        h3 {
+            font-size: 1.50em; 
+            line-height: 1.6;
+            font-weight: normal; 
+            text-align: justify;
+            margin-bottom: 1em;
+            color: #222; 
+        }
+
+        .slide ul {
+            list-style-position: outside;
+            padding-left: 20px; 
+        }
+        .slide ul li h3 {
+            text-align: left; 
+            margin-bottom: 0.5em;
+        }
+
+        nav {
+            text-align: center;
+            padding: 15px 0;
+            border-top: 1px solid #e0e0e0; 
+        }
+
+        nav button {
+            background-color: #D3D3D3; 
+            color: #333; 
+            border: 1px solid #B0B0B0; 
+            padding: 10px 20px;
+            margin: 0 10px;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 1em;
+            transition: background-color 0.3s ease;
+        }
+
+        nav button:hover {
+            background-color: #BEBEBE; 
+        }
+
+        nav button:disabled {
+            background-color: #EAEAEA;
+            color: #A0A0A0;
+            cursor: not-allowed;
+            border-color: #D0D0D0;
+        }
+
+        footer {
+            text-align: center;
+            padding: 12px 0;
+            font-size: 0.9em;
+            color: #555;
+            background-color: #f9f9f9; 
+            border-top: 1px solid #ddd;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="presentation-container">
+        <div class="slide" id="cover-slide">
+            <img src="escudoits.png" alt="Escudo Instituto Técnico Superior">
+            <h1>Reunión de padres de familia<br>
+                y<br> 
+                Coordinación ITS</h1>
+            <h3><strong>5 de junio de 2025</strong></h3>
+        </div>
+
+        <div class="slide">
+            <h1><span class="icon">✉️</span> Saludo y Propósito de la Convocatoria</h1>
+            <h3>Estimados padres y madres de familia del Instituto Técnico Superior de Pereira,</h3>
+            <h3>Reciban un cordial saludo en nombre de toda la comunidad educativa.</h3>
+            <h3>Nos hemos convocado hoy con un propósito fundamental para el desarrollo integral y el éxito académico de sus hijos e hijas: la puntualidad. Entendemos que la dinámica familiar y los desafíos diarios pueden, en ocasiones, dificultar la llegada a tiempo. Sin embargo, hemos observado con preocupación que un grupo de estudiantes, sus hijos entre ellos, ha acumulado tres o más llegadas tarde a la institución, situación que nos motiva a abrir este espacio de diálogo y colaboración.</h3>
+        </div>
+
+        <div class="slide">
+            <h1><span class="icon">⏰</span> La Importancia de la Puntualidad en la Formación</h1>
+            <h3>La puntualidad va más allá de simplemente cumplir un horario. Es un pilar en la formación del carácter y la adquisición de hábitos esenciales para la vida. Cuando un estudiante llega tarde:</h3>
+            <ul>
+                <li><h3><strong>Interrumpe el ambiente de aprendizaje:</strong> Tanto para él mismo como para sus compañeros y docentes.</h3></li>
+                <li><h3><strong>Pierde información valiosa:</strong> Las primeras horas de clase suelen dedicarse a instrucciones importantes, repasos o introducciones a nuevos temas.</h3></li>
+                <li><h3><strong>Se afecta su proceso de adaptación:</strong> Ingresar a un aula cuando la actividad ya ha comenzado puede generar estrés e inseguridad en el estudiante.</h3></li>
+                <li><h3><strong>Se fomenta la idea de que el incumplimiento es aceptable:</strong> Lo cual puede trascender a otros ámbitos de su vida.</h3></li>
+                <li><h3><strong>Se irrespeta el tiempo de los demás:</strong> Un valor fundamental para la convivencia en sociedad.</h3></li>
+            </ul>
+        </div>
+
+        <div class="slide">
+            <h1><span class="icon">📜</span> Nuestro Marco Normativo y la Puntualidad</h1>
+            <h3>Como institución, nuestra labor se rige por el Manual de Convivencia del Instituto Técnico Superior de Pereira, el cual ustedes aceptaron al momento de la matrícula. Este documento es claro respecto a los deberes de nuestros estudiantes y la corresponsabilidad de las familias.</h3>
+            <h3>Nuestro Manual de Convivencia, en su <strong>Artículo 27, numeral 1,</strong> establece como deber de los estudiantes: "Asistir a la institución de manera puntual de acuerdo a los horarios establecidos en cada jornada, sede y nivel".</h3>
+            <h3>Las llegadas tarde están contempladas como una <strong>Situación Tipo I</strong> que afecta la convivencia escolar, según el <strong>Artículo 19, numeral 2</strong> de nuestro manual. Estas situaciones, aunque consideradas leves inicialmente, cuando son recurrentes, indican la necesidad de una intervención conjunta.</h3>
+            <h3>El <strong>Artículo 21</strong> de nuestro manual detalla los protocolos para la atención de estas situaciones, buscando siempre un enfoque formativo y restaurativo.</h3>
+            <h3>Así mismo, el <strong>Artículo 29, numeral 9,</strong> enfatiza como deber de los padres y acudientes: "Acompañar adecuadamente el proceso de Formación Integral y velar por el cumplimiento de las obligaciones escolares de sus hijos, dentro y fuera del Colegio".</h3>
+        </div>
+        
+        <div class="slide">
+            <h1><span class="icon">⚖️</span> Sustento en la Legislación Nacional</h1>
+            <h3>Esta normativa interna se sustenta y complementa con la legislación nacional:</h3>
+            <h3><strong>La Ley 115 de 1994 o Ley General de Educación</strong>, en su <strong>Artículo 7</strong>, asigna a la familia la responsabilidad primordial de "Matricular a sus hijos en instituciones educativas que respondan a sus expectativas, para que reciban una educación conforme a los fines y objetivos establecidos en la Constitución, la ley y el proyecto educativo institucional" y de "Educar a sus hijos y proporcionarles en el hogar el ambiente adecuado para su desarrollo integral". La puntualidad es una condición básica para que la educación se desarrolle adecuadamente.</h3>
+            <h3><strong>El Decreto 1965 de 2013</strong>, que reglamenta la Ley 1620 sobre convivencia escolar, establece la importancia de que los manuales de convivencia incluyan "Las pautas y acuerdos que deben atender todos los integrantes de la comunidad educativa para garantizar la convivencia escolar" <strong>(Artículo 29, numeral 2)</strong> y promueve "medidas pedagógicas y las acciones que contribuyan a la promoción de la convivencia escolar, a la prevención de las situaciones que la afectan" <strong>(Artículo 29, numeral 5).</strong> La impuntualidad reiterada es una situación que afecta dicha convivencia.</h3>
+            <h3><strong>El Código de la Infancia y la Adolescencia (Ley 1098 de 2006)</strong>, en su <strong>Artículo 10,</strong> consagra el principio de "CORRESPONSABILIDAD", donde "La familia, la sociedad y el Estado son corresponsables en su atención, cuidado y protección". Además, el <strong>Artículo 39, numeral 8,</strong> establece como obligación de la familia: "Asegurarles desde su nacimiento el acceso a la educación y proveer las condiciones y medios para su adecuado desarrollo, garantizando su continuidad y permanencia en el ciclo educativo". La impuntualidad afecta directamente la continuidad y el adecuado aprovechamiento del derecho a la educación.</h3>
+        </div>
+
+        <div class="slide">
+            <h1><span class="icon">💡</span> Estrategias Conjuntas para Fomentar la Puntualidad</h1>
+            <h3>Entendemos que cada familia tiene sus propias dinámicas, pero estamos convencidos de que trabajando juntos podemos encontrar soluciones. Les proponemos algunas estrategias que pueden implementar en casa:</h3>
+            <ul>
+                <li><h3><strong>Establecer rutinas claras y consistentes:</strong> Horarios fijos para levantarse, desayunar y salir de casa.</h3></li>
+                <li><h3><strong>Preparar todo la noche anterior:</strong> Uniforme, útiles escolares, merienda. Esto reduce el estrés matutino.</h3></li>
+                <li><h3><strong>Calcular adecuadamente los tiempos de desplazamiento:</strong> Considerando el tráfico y posibles imprevistos.</h3></li>
+                <li><h3><strong>Dialogar con sus hijos:</strong> Explicarles de manera sencilla y directa por qué es importante ser puntuales y cómo afecta su aprendizaje y a los demás.</h3></li>
+                <li><h3><strong>Ser ejemplo:</strong> Los niños aprenden observando. Si ven que en casa se valora la puntualidad, es más probable que ellos también lo hagan.</h3></li>
+                <li><h3><strong>Establecer consecuencias lógicas en casa:</strong> Relacionadas con la falta de puntualidad, que les ayuden a entender la responsabilidad.</h3></li>
+            </ul>
+        </div>
+
+        <div class="slide">
+            <h1><span class="icon">🤝</span> Nuestro Compromiso y el Suyo</h1>
+            <h3>Desde el Instituto Técnico Superior de Pereira, reiteramos nuestro compromiso con la formación integral de sus hijos. Seguiremos implementando las acciones pedagógicas necesarias y aplicando nuestro Manual de Convivencia para fomentar un ambiente de respeto y responsabilidad.</h3>
+            <h3>Sin embargo, necesitamos de su compromiso activo. La familia es el primer y más influyente entorno educativo. Por ello, les invitamos a que, como muestra de su compromiso para abordar esta situación y fortalecer la puntualidad de sus hijos, consideren firmar un compromiso de convivencia. Este documento formalizará las estrategias que conjuntamente definamos y nos permitirá hacer un seguimiento más cercano y colaborativo.</h3>
+        </div>
+
+        <div class="slide">
+            <h1><span class="icon">🙏</span> Agradecimiento</h1>
+            <h3>Agradecemos profundamente su presencia y su disposición para trabajar en equipo por el bienestar y el futuro de nuestros estudiantes. La puntualidad es un pequeño gran paso hacia la formación de ciudadanos responsables, respetuosos y exitosos.</h3>
+        </div>
+    </div>
+
+    <nav>
+        <button id="prevBtn">Anterior</button>
+        <button id="nextBtn">Siguiente</button>
+    </nav>
+
+    <footer>
+        Coordinación de Convivencia ITS
+    </footer>
+
+    <script>
+        const allSlidesNodeList = document.querySelectorAll('.slide');
+        const coverSlideElement = document.getElementById('cover-slide');
+        const prevButton = document.getElementById('prevBtn');
+        const nextButton = document.getElementById('nextBtn');
+
+        // Convertimos NodeList a un Array para facilitar la manipulación (ej. filter).
+        let navigableSlides = Array.from(allSlidesNodeList); 
+        
+        let currentSlideIndex = 0; 
+        let coverHasBeenShown = true; // Indica si la portada está actualmente en el flujo de navegación.
+
+        function updateSlideView() {
+            // Ocultar todas las diapositivas que están actualmente en navigableSlides
+            navigableSlides.forEach(slide => slide.classList.remove('active'));
+
+            if (coverHasBeenShown) {
+                // Si la portada aún forma parte de las diapositivas navegables (estado inicial)
+                // y el índice es 0, mostramos la portada.
+                if (currentSlideIndex === 0 && navigableSlides[0].id === 'cover-slide') {
+                    navigableSlides[0].classList.add('active');
+                    prevButton.disabled = true; // No hay anterior a la portada
+                    nextButton.disabled = navigableSlides.length === 1; // Si solo hay portada, no hay siguiente
+                }
+            } else {
+                // Si la portada ya fue "descartada", navigableSlides no la contiene.
+                // currentSlideIndex ahora se refiere al índice dentro de este array filtrado.
+                if (navigableSlides.length > 0 && currentSlideIndex >= 0 && currentSlideIndex < navigableSlides.length) {
+                    navigableSlides[currentSlideIndex].classList.add('active');
+                    prevButton.disabled = currentSlideIndex === 0; // No hay anterior si estamos en la primera diapositiva de contenido
+                    nextButton.disabled = currentSlideIndex === navigableSlides.length - 1;
+                } else if (navigableSlides.length === 0) {
+                    // No quedan diapositivas para mostrar (caso extremo si solo había portada)
+                    prevButton.disabled = true;
+                    nextButton.disabled = true;
+                }
+            }
+        }
+
+        nextButton.addEventListener('click', () => {
+            if (coverHasBeenShown && currentSlideIndex === 0 && navigableSlides[0].id === 'cover-slide') {
+                // Estamos en la portada y se presiona "Siguiente"
+                coverSlideElement.style.display = 'none'; // Ocultar permanentemente la portada
+                coverHasBeenShown = false; // Marcar que la portada ya no debe considerarse
+
+                // Actualizar la lista de diapositivas navegables para excluir la portada
+                navigableSlides = navigableSlides.filter(slide => slide.id !== 'cover-slide');
+                
+                currentSlideIndex = 0; // El nuevo índice 0 será la primera diapositiva de contenido
+                
+                if (navigableSlides.length > 0) {
+                    updateSlideView();
+                } else {
+                    // No hay más diapositivas después de la portada
+                    prevButton.disabled = true;
+                    nextButton.disabled = true;
+                }
+            } else {
+                // Navegación normal entre las diapositivas de contenido
+                if (currentSlideIndex < navigableSlides.length - 1) {
+                    currentSlideIndex++;
+                    updateSlideView();
+                }
+            }
+        });
+
+        prevButton.addEventListener('click', () => {
+            // El botón "Anterior" solo funciona si la portada ya no está activa
+            // y si no estamos en la primera diapositiva de contenido.
+            if (!coverHasBeenShown && currentSlideIndex > 0) {
+                currentSlideIndex--;
+                updateSlideView();
+            }
+            // Si coverHasBeenShown es true, significa que estamos en la portada,
+            // y el botón "Anterior" ya debería estar deshabilitado por updateSlideView().
+        });
+
+        // Mostrar la diapositiva inicial (la portada) al cargar la página
+        updateSlideView();
+
+    </script>
+
+</body>
+</html>
